@@ -1,2 +1,0 @@
-# cpanel
-Portfolio Control Panel
