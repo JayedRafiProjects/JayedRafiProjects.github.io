@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Arbitrary Mapping Algorithm</title>
+<link rel="stylesheet" href="https://jayedrafiprojects.github.io/portfolio/style/style.css">
+<link rel="icon" href="https://jayedrafiprojects.github.io/portfolio/asset/portfolio.png">
+</head>
+
+<body>
+<div class="header-two">
+	<span style="font-size:30px;cursor:pointer" onclick="view()">&#9776;</span></div>
+<div class="header">
+	<p>portfolio</p></div>
+	<div id="menu" class="menu">
+  <a href="javascript:void(0)" class="xbutton" onclick="exit()">&times;</a>
+  <a href="https://jayedrafiprojects.github.io/portfolio/index.html">Home</a>
+  <a href="https://jayedrafiprojects.github.io/portfolio/exp/experience.html">Ind. experience</a>
+  <a href="https://jayedrafiprojects.github.io/portfolio/project/pswe.html">Software eng. project</a>
+  <a href="https://jayedrafiprojects.github.io/portfolio/project/pweb.html">web dev. project</a>
+  <a href="https://jayedrafiprojects.github.io/portfolio/pub/publication.html">Publication</a>
+  <a href="https://jayedrafiprojects.github.io/portfolio/edu/education.html">Education</a>
+  <a href="https://jayedrafiprojects.github.io/portfolio/contact.html">Contact</a>
+  <a href="">Causual Repo</a>
+</div>
+
+<div id="main">
+	<p class="research-title">My Research</p>
+	<p class="title">Arbitrary Mapping Algorithm</p>
+	<p class="research-bio"><strong>Introduction:</strong><br/>
+	This project is a simple algorithm to re-arrange the values randomly in an array. I have come across many situations where I needed to implement different scenarios in each iteration or each time I run the application. And I have used several algorithms that are already available. But why not try something by myself? The sole purpose of sharing this is to not imply this algorithm is faster than others but to give you more options to choose from.</p>
+		<p class="research-bio"><strong>Background idea:</strong><br/>
+Not everything we do is logical. Let's say your friend asked you to buy him a bottle of water. You went to a shop and you found multiple same brand water bottles in a single row. What will you do in this scenario? As a member of the same species as you, my best guess is you will pick one randomly. Or let's think about the lottery draw. How do they select the winner? Yes, it's up to luck but in a logical language, we call it random. Computers are made to make our work easier and so it has to be programmed like the way we do the work.</p>
+			<p class="research-bio"><strong>Application:</strong><br/>
+	This can have multiple applications based on the software it is being used for. I'll just bring some examples here to make the concept clear between us.<br/>
+	Let every index of the array color represents a unique color code.<br/>
+	<code>String[] color = {"#67e11f", "#7429a3", "#4171cd", "#f3fad0"}; //HEX colour codes are stored as a string</code><br/>
+and these colour represents the colour of 4 boxes. And your goal is to make an application which gives you different color on each start like the image 1.1.</p>
+	<div align="center"><img src="asset/re-ama.png" alt="img1.1" width="20%"></div>
+	<p class="research-bio">As you can see, each whole square (a combination of 4 small squares) represents each time you entered your application. And it is showing you different colors. So instead of having the same constant colour each time it is giving variation. Awesome! isn't it? So your possible color in the <code>color[i]</code> will be any from <code>color[0]</code> to <code>color[SIZE-1]</code>. <code>SIZE</code> is the length of the array.
+</p>
+	<p class="research-bio"><strong>Pseudocode (Java):</strong><br/>
+	This pseudocode is asuming the data-type is String. But it will work with any data-type you want.<br/><br/>
+	<code>
+	public String[] makeRandom(String[] color){<br/><br/>
+		
+		final int SIZE = color.length(); //size of color<br/>
+		final int RANDOM_CONSTANT = (int)*Math.random()*SIZE; //see Analysis section for details<br/>
+		String temporaryArray[] = new String[SIZE];<br/><br/>
+		
+		//see details in Analysis<br/>
+		for(i is from 0 to SIZE-1){<br/>
+		 int index = (i+RANDOM_CONSTANT)%SIZE; //new random index<br/>
+		 temporaryArray[i] = color[index];<br/>
+		}<br/><br/>
+		
+		return temporaryArray;
+		<br/>}
+	</code>
+	</p>
+	<p class="research-bio"><strong>Analysis:</strong><br/>
+	We can divide the algorithm into two major parts.<br/>
+	1. creating the <code>RANDOM_CONSTANT</code> value.<br/>
+	2. Creating random index &amp; passing the value<br/><br/>
+	<code>Math.random()</code> always returns <code>0.0 &#60;= value &#60; 1.0</code>. But we need to find a way make it an integer number between <code>0</code> upto the <code>SIZE</code>. Solution is first multiply the number returned by random with the <code>SIZE</code>. Now we have a number within our expected range (<code>0 - SIZE</code>). Cast the number to an int. So we get:<br/>
+	<code>final int RANDOM_CONSTANT = (int)*Math.random()*SIZE;</code><br/><br/>
+	 Create a loop same size as the color array. In each iteration the loop will create a random index value and assign it to a temporary array. For the new random index first we add the <code>RANDOM_CONSTANT</code> with current index <code>i</code>.But the problem happens now is it goes outside the scope of color array. The solution is modulo(<code>%</code>). It helps the value keep in range (<code>0&#60;=i&#60;SIZE</code>). So we get:<br/>
+	<code>int index = (i+RANDOM_CONSTANT)%SIZE; //the new random index</code><br/>
+	Now that we have the random index, we will pass the value of <code>color[index]</code> into the <code>temporaryArray[i]</code>.<br/><code>temporaryArray[i]=color[index]; //passing the value</code><br/><br/>
+	Now create a new loop and copy the temporaryArray values into color array. The values are noe randomized.</p>
+	<div align="center"><img src="asset/re-ama2.jpg" alt="img1.2" width="50%"></div>
+	
+	
+			<p class="research-bio"><strong>Limitation:</strong><br/>
+This algorithm has been tested only using the Java programming language. This does not indicate it won't work with other languages but also doesn't guarantee. 
+</p>
+	<p class="research-bio"><strong>code:</strong> <a href="https://github.com/JayedRafiProjects/arbritary-mapping-algorithm/blob/main/system.java" title="source">source</a></p>
+	<p class="research-bio"><strong>Author &amp; Date:</strong> Jayed Rafi / August 2021</p>
+</div>
+	<div id="footer">
+	  		<p class="footer" >Copyright © 2021. All rights reserved.
+		<br/>Released under GPL-3.0 license.</p>
+	</div>
+<script>
+function view() {
+  document.getElementById("menu").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function exit() {
+  document.getElementById("menu").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+	</script>
+	
+</body>
+</html>
