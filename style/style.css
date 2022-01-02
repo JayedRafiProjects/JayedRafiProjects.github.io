@@ -219,3 +219,19 @@ details[open] > summary {
 code{
 	color: #03045e;
 }
+
+.col{
+	width: 50%;
+	float: left;
+}
+
+.row:after{
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}
