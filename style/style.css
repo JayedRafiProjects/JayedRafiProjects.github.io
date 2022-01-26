@@ -83,7 +83,15 @@ a:hover{
 	  font-size: 30px;
 	text-align: center;
 	font-family: 'Rubik', sans-serif;
-	color: #d4a373;
+	color: #006d77;/*changed*/
+}
+
+.t-details{
+	padding: 0px 60px;
+	  font-size: 15px;
+	text-align: center;
+	font-family: 'Be Vietnam Pro', sans-serif;
+	color: #404040;/*changed*/
 }
 
 #index{
@@ -93,7 +101,7 @@ a:hover{
 }
 
 #index td, #index th {
-  border: 1px solid #faedcd;
+  border: 1px solid #404040;
   padding: 8px;
   color: #000000;
 }
@@ -102,7 +110,7 @@ a:hover{
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #d4a373;
+  background-color: #404040;/*changed*/
   color: white;
 }
 
