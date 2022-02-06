@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #666666;
+	background-color:#e9d8a6;
+}
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;}
+
+.content{
+  margin: 0 auto 0 auto; 
+  display: table; 
+  height: 100%;  
+  position: relative; 
+  overflow: hidden; 
+  background-color: #FFFFFF;
+  width: 780px;
+  box-shadow: 0px 5px 30px 1px grey;
+}
+
+.title{
+	position:relative;
+	text-align: center;
+	width: 100%;
+	height:100px;
+	margin-left:0px;
+	margin-right:0px;
+	color: white;
+	background-color: #83c5be;
+}
+
+.name{
+position:relative;
+	text-align: center;
+padding: 35px 0px 20px 0px;
+font-family: 'Press Start 2P', cursive;
+font-size:28px;
+font-weight:bold;
+}
+
+.navigation a {
+	color: white;
+	text-decoration: none;
+}
+.nav-link{
+	height:30px;
+	width: 130px;
+	text-align:center;
+	float:left;
+	font-size:15px;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding-top: 10px;
+	background-color: #006d77;
+
+	
+}
+
+.nav-link:hover{
+	background-color: #83c5be;
+}
+
+.det-area{
+	width: 780px;
+	height:600px;
+}
+
+.text-area{
+	overflow: auto;
+	height: 540px;
+	padding: 10px;
+	color: #343a40;
+}
+
+.text-area a{
+	color: #006d77;
+	text-decoration: none;
+}
+
+.text-area a:hover{
+	color: #83c5be;
+}
+
+.foot{
+	width: 780px;
+	height:30px;
+	background-color: #343a40;
+text-align:center;
+padding: 10px 0px 7px 0px;
+}
+
+.foot a{
+	color: white;
+}
+
+.foot a:hover{
+	color: #48cae4;
+}
+
+.page-title{
+	text-align: center;
+	padding: 10px 0px;
+	font-size: 20px;
+}
+
+.page-det{
+	text-align: left;
+	padding: 10px 0px;
+}
+
+.page-home{
+	text-align: justify;
+	padding: 10px 25px 10px 25px;
+}
+
+.page-home-name{
+	font-family: 'Comforter', cursive;
+	text-align: center;
+	padding: 10px 0px;
+	font-size: 30px;
+}
+
+.email{
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+}
+
+.email a{
+	color: #006d77;
+	text-decoration: none;
+}
+
+.email a:hover{
+	color: #83c5be;
+}
+
+.media{
+	padding: 120px 0px 10px 0px;
+	text-align: center;
+}
+
+.media a{
+	color: #006d77;
+	text-decoration: none;
+}
+
+.media a:hover{
+	color: #83c5be;
+}
+
+.location{
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.misc{
+	padding: 10px 50px;
+}

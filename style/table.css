@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
 .tab {
   overflow: hidden;
   border: 1px solid #006d77;
@@ -36,7 +37,7 @@
   padding: 6px 12px;
   border: 1px solid #006d77;
   border-top: none;
-  height: 1000px;
+  height: 390px;
   overflow: auto;
 }
 
@@ -70,6 +71,25 @@
 	color: #6c757d;
 }
 
-canvas{
-	padding: 20px;
+
+.experience{
+	display: table;
+	background-color: #fdffb6;
+	width: 650px;
+	height: auto;
+  border: 1px solid #343a40;
+}
+
+.designation{
+	display: table;
+	background-color: #343a40;
+	color: white;
+	width: 650px;
+	height: auto;
+	padding: 10px;
+}
+
+.info{
+	color: #343a40;
+	padding: 5px 10px 5px 10px;
 }
