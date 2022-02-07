@@ -30,7 +30,7 @@
 	<div class="text-area">
 		<p class="page-home-name">Jayed Rafi</p>
 		
-		<p class="page-home"><img src="./image/profile.jpg" alt="alt text" style="float:right; padding: 16px 0px 10px 10px;" width="160px">
+		<p class="page-home"><img src="./image/profile.jpg" alt="alt text" style="float:right; padding: 16px 0px 10px 10px;" width="160px" id="profile" onClick="changeImage()">
 		Hey there!<br/>
 My name is Jayed Rafi, I am a developer based on Winnipeg, Manitoba. Currently I am pursuing my bachelors degree in Computer Science at the University of Manitoba &amp; working as a Developer (intern) at the Government of Manitoba. My project interests are artificial intelligence, human-computer interaction &amp; theoretical computer science.<br/>
 Besides software engineering, I have interest in structural design. I have done design (ED) courses as part of my electives at the university, which gave me a better understanding of design and modelling.<br/>
@@ -47,4 +47,13 @@ I am open to research &amp; project opportunity in computer science &amp; engine
 	</div>
 
 </body>
+<script language="javascript">
+	//simple but amazing
+	var images = ["./image/profile.jpg","./image/profile-2.jpg","./image/profile-3.jpg"];
+	var i = 0;
+    function changeImage() {
+		i=(i+1)%images.length;
+        document.getElementById("profile").src = images[i];
+	}
+</script>
 </html>
