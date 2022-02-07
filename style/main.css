@@ -169,3 +169,13 @@ padding: 10px 0px 7px 0px;
 .misc{
 	padding: 10px 50px;
 }
+
+.archived{
+	text-align: center;
+	padding: 8px 0px;
+	display: block;
+	color: #461220;
+	background: #b23a48;
+	border: 1px solid #461220;
+	border-radius: 25px;
+}
