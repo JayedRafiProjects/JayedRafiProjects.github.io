@@ -117,10 +117,10 @@ padding: 10px 0px 7px 0px;
 }
 
 .blog{
-		padding: 10px 25px;
+	padding: 10px 25px;
 }
 
-.blog li{
+.blog ul li{
 	padding: 10px 0px;
 }
 
