@@ -62,7 +62,7 @@
 				</th>
 			</tr>
 			<tr>
-				<th style="width: 35%"><img src="./image/bike-sombrio-2.jpeg" alt="norco storm 4" class="picture"></th>
+				<th style="width: 35%"><img src="./image/bike-sombrio-2.jpeg" alt="norco storm 4" class="picture multi-img" id ="sombrio" onClick="changeImage()"></th>
 				<th style="width: 65%" class="paragraph">
 				<p>Gear / MTB / Sombrio Shovel 5 (2022) <i class="fa fa-bicycle" aria-hidden="true"></i></p>
 				<br/>
@@ -85,6 +85,16 @@
 		
 		
 	</div>
+	<script language="javascript">
+	//simple but amazing
+	var images = ["./image/bike-sombrio-3.jpg","./image/bike-sombrio.jpeg","./image/bike-sombrio-2.jpeg"];
+	var i = 0;
+    function changeImage() {
+	document.getElementById("sombrio").src = images[i];
+	i++;
+	i=i%3;
+	}
+	</script>
 	<div class="foot"><a href="mailto:jayedrafi@outlook.com"><i class="fa fa-envelope-o" style="font-size:23px"></i></a>
 		&nbsp;&nbsp;<a href="https://github.com/JayedRafiProjects"><i class="fa fa-github" style="font-size:23px"></i></a>
 		&nbsp;&nbsp;<a href="https://www.linkedin.com/in/jayed-rafi/"><i class="fa fa-linkedin" style="font-size:23px"></i></a></div>
