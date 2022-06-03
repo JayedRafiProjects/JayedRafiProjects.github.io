@@ -53,8 +53,6 @@
   background: #fdffb6;
 }
 
-
-
 .details th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -62,15 +60,6 @@
   background-color: #343a40;
   color: white;
 }
-
-.details a{
-	color: #343a40;
-}
-
-.details a:hover{
-	color: #6c757d;
-}
-
 
 .experience{
 	display: table;
