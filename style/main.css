@@ -73,6 +73,10 @@ font-weight:bold;
 	background-color: #83c5be;
 }
 
+.active{
+	background-color: #83c5be;
+}
+
 .det-area{
 	width: 780px;
 	height:600px;
