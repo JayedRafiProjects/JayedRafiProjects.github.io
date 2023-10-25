@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-	        <script src="https://d3js.org/d3.v6.min.js"></script>
-
+<script src="//d3js.org/d3.v4.js"></script>
+<h2>D3.js is Easy to Use</h2>
+<p>The script below selects the body element and appends a paragraph with the text "Hello World!":</p> 
 </head>
 
 <body>
@@ -13,27 +14,10 @@
 	
 <script>
 
+	d3.select("body").append("p").text("https://gist.githubusercontent.com/heiswayi/9b3b6153b159343ebe9a/raw/d3785fb176e1573fdfd0777fdb8900c2a0e4457b/%2520mh17.csv");
+
 	
 	
 	
-	d3.text("https://gist.githubusercontent.com/heiswayi/9b3b6153b159343ebe9a/raw/d3785fb176e1573fdfd0777fdb8900c2a0e4457b/%2520mh17.csv", function(data) {
-    var parsedCSV = d3.csv.parseRows(data);
-
-    var container = d3.select("body")
-        .append("table")
-
-    .selectAll("tr")
-        .data(parsedCSV).enter()
-        .append("tr")
-
-    .selectAll("td")
-        .data(function(d) {
-            return d;
-        }).enter()
-        .append("td")
-        .text(function(d) {
-            return d;
-        });
-});
 </script>
 </html>
