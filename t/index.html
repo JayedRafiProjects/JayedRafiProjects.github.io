@@ -12,11 +12,11 @@ d3.csv("https://gist.githubusercontent.com/heiswayi/9b3b6153b159343ebe9a/raw/d37
     var myd="";
 	
        for (var i = 0; i < data.length; i++) {
-        myd+="<tr>"+data[i].NAME+"</tr>";
+        myd+="<tr><td>"+data[i].NAME+"</td></tr>";
     } 
 
 
-d3.select("table").append("ping").text(myd);
+d3.select("table").text(myd);
 
 });
 </script>
