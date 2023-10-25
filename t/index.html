@@ -4,18 +4,19 @@
 <body>
 <h2>D3.js is Easy to Use</h2>
 <p>The script below selects the body element and appends a paragraph with the text "Hello World!":</p> 
-
+<table></table>
+<p>end</p>
 <script>
 
 d3.csv("https://gist.githubusercontent.com/heiswayi/9b3b6153b159343ebe9a/raw/d3785fb176e1573fdfd0777fdb8900c2a0e4457b/%2520mh17.csv", function(data) {
     var myd="";
 	
        for (var i = 0; i < data.length; i++) {
-        myd+="<p>"+data[i].NAME+"</p>";
+        myd+="<tr>"+data[i].NAME+"</tr>";
     } 
 
 
-d3.select("body").append("p").text(myd);
+d3.select("table").append("ping").text(myd);
 
 });
 </script>
