@@ -14,11 +14,11 @@
 
 <script>
 
-d3.csv("https://gist.githubusercontent.com/heiswayi/9b3b6153b159343ebe9a/raw/d3785fb176e1573fdfd0777fdb8900c2a0e4457b/%2520mh17.csv", function(data) {
+d3.csv("https://jayedrafi.com/t/vehicle_information_form.csv", function(data) {
     var myd="";
 	
        for (var i = 0; i < data.length; i++) {
-        myd+="<tr><td>"+data[i].NAME+"</td></tr>";
+        myd+="<tr><td>"+data[i].date+"</td><td>"+data[i].odometer+"</td><td>"+data[i].source+"</td><td>"+data[i].details+"</td></tr>";
 
     } 
 
