@@ -1,27 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
 <script src="//d3js.org/d3.v4.js"></script>
+<body>
 <h2>D3.js is Easy to Use</h2>
 <p>The script below selects the body element and appends a paragraph with the text "Hello World!":</p> 
-</head>
 
-<body>
-	
-</body>
-	
 <script>
-	
-	var myd = "dd";
+
 d3.csv("https://gist.githubusercontent.com/heiswayi/9b3b6153b159343ebe9a/raw/d3785fb176e1573fdfd0777fdb8900c2a0e4457b/%2520mh17.csv", function(data) {
-    myd = data;
+    var myd="";
 	
-    
+       for (var i = 0; i < data.length; i++) {
+        myd+="<p>"+data[i].NAME+"</p>";
+    } 
+
+
+d3.select("body").append("p").text(myd);
+
 });
-	
-	d3.select("body").append("p").text(myd);
-	
 </script>
+
+</body>
 </html>
