@@ -1,5 +1,5 @@
 // JavaScript Document
-d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data) {
+d3.csv("https://jayedrafi.com/t/vehicle_information_form.csv", function(data) {
     var myd="";
 	
        for (var i = 0; i < data.length; i++) {
@@ -8,3 +8,6 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
     } 
 
 d3.select("table").html(myd);
+
+
+});
