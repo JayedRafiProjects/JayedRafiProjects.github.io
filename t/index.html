@@ -15,13 +15,13 @@
 <script>
 	
 	var myd = "dd";
-d3.csv("/data/employees.csv", function(data) {
+d3.csv("https://gist.githubusercontent.com/heiswayi/9b3b6153b159343ebe9a/raw/d3785fb176e1573fdfd0777fdb8900c2a0e4457b/%2520mh17.csv", function(data) {
     myd = data;
-	d3.select("body").append("p").text(myd);
+	
     
 });
 	
-	
+	d3.select("body").append("p").text(myd);
 	
 </script>
 </html>
