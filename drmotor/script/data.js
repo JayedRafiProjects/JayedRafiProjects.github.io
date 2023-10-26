@@ -7,7 +7,7 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
 
     } 
 
-d3.select("table").html(myd);
+d3.select("#history").html(myd);
 
 
 });
