@@ -9,6 +9,8 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
 	var wheelMaterial = data[0].wmaterial;
 	var wheelSetup = data[0].wsetup;
 	var tire = data[0].tire;
+	var ownername = data[0].owner;
+	var owneremail = data[0].email;
 	
        for (var i = 0; i < data.length; i++) {
         myd+="<tr><td>"+data[i].date+"</td><td>"+data[i].odometer+"</td><td>"+data[i].source+"</td><td>"+data[i].details+"</td></tr>";
@@ -57,5 +59,7 @@ d3.select("#wintertire").html(winter);
 d3.select("#falltire").html(fall);
 d3.select("#summertire").html(summer);
 d3.select("#rotaterec").html(setupRec);
+d3.select("#ownername").html(ownername);
+d3.select("#owneremail").html(owneremail);
 
 });
