@@ -1,6 +1,10 @@
 // JavaScript Document
 d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data) {
     var myd="<tr><th>Date</th><th>Odometer</th><th>Source</th><th>Details</th></tr>";
+	var vinNumber = data[0].vin;
+	var licensePlate = data[0].plate;
+	var location = data[0].location;
+	var lastKm = data[data.length-1].odometer;
 	
        for (var i = 0; i < data.length; i++) {
         myd+="<tr><td>"+data[i].date+"</td><td>"+data[i].odometer+"</td><td>"+data[i].source+"</td><td>"+data[i].details+"</td></tr>";
@@ -8,6 +12,7 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
     } 
 
 d3.select("#history").html(myd);
-d3.select("#vin").html(data[0].vin);
-d3.select("#plate").html(data[0].plate+" ("+data[0].location+")");
+d3.select("#vin").html(vinNumber);
+d3.select("#plate").html(licensePlate+" ("+location+")");
+d3.select("#lastKm").html(lastKm);
 });
