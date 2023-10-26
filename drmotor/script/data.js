@@ -16,28 +16,36 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
     } 
 	
 	//tire recommendation
-	var winter = "&#x2713";//false
-	var fall = "&#x2713";//false
-	var summer = "&#x2713";//false
+	var winter = "&#x2717";//false
+	var fall = "&#x2717";//false
+	var summer = "&#x2717";//false
 	
 	if(tire=="All weather"){
-		winter = "&#x2717";
-		fall = "&#x2717";
-		summer = "&#x2717";
+		winter = "&#x2713";//true
+		fall = "&#x2713";//true
+		summer = "&#x2713";//true
 	}
 	else if(tire =="Winter"){
-		winter = "&#x2717";
+		winter = "&#x2713";//true
 		
 	}
 	else if(tire == "Summer"){
-		summer = "&#x2717";
+		summer = "&#x2713";//true
 		
 	}
 	else if(tire == "All season"){
-		summer = "&#x2717";
-		fall = "&#x2717";
+		summer = "&#x2713";//true
+		fall = "&#x2713";//true
 	}
 	
+	var setupRec = "";
+	//staggered setup or square setup
+	if(wheelSetup == "Staggered"){
+		setupRec = "Since your car has staggered wheel setup, you should flip tires inside out / swap them left to right in every 6 months / 10000 KM."
+	}
+	if(wheelSetup == "Square"){
+		setupRec = "Since your car has square wheel setup, you should rotate your tires in every 6 months / 10000 KM."
+	}
 
 d3.select("#history").html(myd);
 d3.select("#vin").html(vinNumber);
@@ -48,5 +56,6 @@ d3.select("#tire").html(tire);
 d3.select("#wintertire").html(winter);
 d3.select("#falltire").html(fall);
 d3.select("#summertire").html(summer);
+d3.select("#rotaterec").html(setupRec);
 
 });
