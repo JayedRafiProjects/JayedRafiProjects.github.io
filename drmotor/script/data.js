@@ -52,7 +52,7 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
 d3.select("#history").html(myd);
 d3.select("#vin").html(vinNumber);
 d3.select("#plate").html(licensePlate+" ("+location+")");
-d3.select("#lastKm").html(lastKm);
+d3.select("#lastKm").html(lastKm+" KM");
 d3.select("#wheel").html(wheelSize+" inch / "+wheelMaterial+" / "+wheelSetup);
 d3.select("#tire").html(tire);
 d3.select("#wintertire").html(winter);
