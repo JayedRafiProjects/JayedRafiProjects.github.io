@@ -8,6 +8,6 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
     } 
 
 d3.select("#history").html(myd);
-
-
+d3.select("#vin").html(data[0].vin);
+d3.select("#plate").html(data[0].plate+" ("+data[0].location+")");
 });
