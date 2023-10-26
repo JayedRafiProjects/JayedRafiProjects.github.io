@@ -41,10 +41,10 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
 	var setupRec = "";
 	//staggered setup or square setup
 	if(wheelSetup == "Staggered"){
-		setupRec = "Since your car has staggered wheel setup, you should flip tires inside out / swap them left to right in every 6 months / 10000 KM."
+		setupRec = "Flip tires inside out or swap them left to right in every 6 months or every 10000 KM."
 	}
 	if(wheelSetup == "Square"){
-		setupRec = "Since your car has square wheel setup, you should rotate your tires in every 6 months / 10000 KM."
+		setupRec = "Rotate your tires in every 6 months or every 10000 KM."
 	}
 
 d3.select("#history").html(myd);
