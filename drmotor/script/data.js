@@ -58,7 +58,7 @@ d3.csv("https://jayedrafi.com/drmotor/data/JTHCF1D28E5008692.csv", function(data
 				   lastOilChange=data[i].odometer;
 			   }
 			   
-			   serviceDetails+=s[parseInt(serviceDetails[x])]+"<br>";
+			   serviceDetails+=s[parseInt(serviceCode[x])]+"<br>";
 		   }
 		   
 		   
