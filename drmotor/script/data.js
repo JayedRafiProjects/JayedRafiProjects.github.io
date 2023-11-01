@@ -113,6 +113,6 @@ d3.select("#summertire").html(summer);
 d3.select("#rotaterec").html(setupRec);
 d3.select("#ownername").html(ownername);
 d3.select("#owneremail").html(owneremail);
-d3.select("#lastoil").html(lastOilChange+8000);
+d3.select("#lastoil").html(parseInt(lastOilChange)+8000);
 
 });
