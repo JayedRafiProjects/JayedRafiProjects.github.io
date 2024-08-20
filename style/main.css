@@ -195,3 +195,34 @@ padding: 10px 0px 7px 0px;
 .multi-img{
 	cursor: pointer;
 }
+
+
+
+
+
+.accordion {
+  background-color: #006d77;
+	border: 1px solid #006d77;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  float: left;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: white;
+}
+
+.active, .accordion:hover {
+  background-color: #83c5be; 
+}
+
+.panel {
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  padding: 6px 12px;
+  border: 1px solid #006d77;
+  border-top: none;
+}
