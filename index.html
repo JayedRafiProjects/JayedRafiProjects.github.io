@@ -15,7 +15,7 @@
     <link rel="icon" href="./image/icon.png" />
   </head>
 
-  <body>
+  <body onload="myFunction()">
     <div class="content">
       <div class="title">
         <p class="name">portfolio</p>
@@ -61,6 +61,17 @@
             Feel free to connect via email
             <a href="mailto:jayedrafi.me@gmail.com">jayedrafi.me@gmail.com</a>.
             <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+			  This site was last updated on: <span id="lastupdatetime"></span>
           </p>
         </div>
       </div>
@@ -88,6 +99,13 @@
     function changeImage() {
       i = Math.floor(Math.random() * 3);
       document.getElementById("profile").src = images[i];
+    }
+  </script>
+	
+  <script>
+    function myFunction() {
+      var x = document.lastModified;
+      document.getElementById("lastupdatetime").innerHTML = x;
     }
   </script>
 </html>
